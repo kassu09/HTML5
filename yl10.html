@@ -14,46 +14,91 @@
 <body>
     <!-- Kaspar 17.11.25 -->
     <h1>ÕPILASE REGISTREERIMISVORM</h1>
-    <form action="" method="get">
         <fieldset>
             <legend>Isikuandmed</legend>
-  <p>
+  <br>
     <label for="fname">Nimi</label>
     <br>
-    <input id="fname" name="name" type="text" required placeholder="Kaspar" maxlenght="30"
-    
-  </p>
-  <p>
-    <label for="name">Perenimi</label>
+    <input id="fname" name="fname" type="text" placeholder="Kaspar" maxlength="30" required>
+  <br>
+    <label for="lname">Perenimi</label>
     <br>
-    <input id="name" name="name" type="name" required>
-  </p>
-  <p>
-    <button type="submit">Registreeru</button>
-  </p>
-  <p>
-    <label for="Sünnikuupäev">Sünnikuupäev</label>
+    <input id="lname" name="lname" type="text" placeholder="Põlluste" maxlength="30" required>
+  <br>
+    <label for="date">Sünnikuupäev</label>
     <br>
-    <input type="date" min="1950-01-01" max="2025-12-31">    
-  </p>
-  <p>
-    <label for="Sugu">Sugu</label>
+    <input type="date" id="date" min="1950-01-01" max="2025-12-31" value="1980-01-01" required>
+  <br>
+    <label for="radio">Sugu</label>
     <br>
-    <input type="radio" name="Mees" value="Mees"> Mees
-    <input type="radio" name="Naine" value="Naine" checked> Naine
-    <input type="radio" name="Transformer" value="Transformer"> Transformer
-        </fieldset>
-    </form>
-    <form action="/submit_page" method="get">
-  </p>
-  <p>
+    <input type="radio" id="date" name="Mees" value="Mees"> Mees
+    <input type="radio" id="date" name="Naine" value="Naine" checked> Naine
+    <input type="radio" id="date" name="Transformer" value="Transformer"> Transformer
+  <br>
+         </fieldset>
+  <fieldset>
+        <legend>Kontakt</legend>
+  <br>
   <label for="email">E-post:</label>
   <br>
-  <input id="email" type="email">
-  </p>
+  <input type="email" id="email" name="email" maxlength="100" placeholder="nt nimi@kool.ee">
+  <br>
   <label for="tel">Telefon</label>
   <br>
-  <input id="tel" type="email"
-</form>
-</body>
+  <input type="tel" id="tel" name="telefon" placeholder="+372 6767 6767" pattern="^\+372\s?\d{7,8}$" required>
+  <br>
+  <label for="aadress">Aadress</label>
+  <br>
+  <textarea name="aadress" id="aadress" rows="5" cols="50"></textarea>
+  <br>
+  <label for="linn">Linn / asula</label>
+  <br>
+  <input type="text" id="linn" name="linn" maxlength="30" placeholder="nt Tallinn" required>
+  <br>
+  <label for="post">Postiindeks</label>
+  <br>
+  <input type="text" id="post" name="post" pattern="^\d{5}$" placeholder="nt 10111" required>
+  <br>
+  <label for="riik">Riik</label>
+  <br>
+  <input type="text" id="riik" name="riik" value="Eesti" readonly>
+  <br>
+  </fieldset>
+  <fieldset>
+      <legend>Muu info</legend>
+<br>
+<label>Huvialad</label>
+<br>
+<input type="checkbox" id="joonistamine" name="huvi" value="joonistamine"> Joonistamine
+<input type="checkbox" id="laulmine" name="huvi" value="laulmine"> Laulmine
+<input type="checkbox" id="tantsimine" name="huvi" value="tantsimine"> Tantsimine
+<input type="checkbox" id="kokkamine" name="huvi" value="kokkamine"> Kokkamine
+<br>
+<label for="muu">Muu</label>
+<br>
+<input type="text" id="muu" name="muu" maxlength="30" placeholder="täpsusta">
+<br>
+<label for="veebileht">Isiklik veebileht</label>
+<br>
+<input type="url" id="veebileht" name="veebileht" placeholder="https://minuleht.ee">
+<br>
+<label for="varv">Eelistatud teemavärv</label>
+<br>
+<input type="color" id="varv" name="varv" value="#0000ff">
+<br>
+<label for="dokumendid">Dokumendid</label>
+<br>
+<input type="file" id="dokumendid" name="dokumendid" accept=".pdf,image/*">
+<br>
+</fieldset>
+<fieldset>
+     <legend>Nõustumine</legend>
+<label for="kinnitus">Kinnitamine</label>
+<br>
+<input type="checkbox" id="kinnitus" name="kinnitus" required>
+<br>
+Kinnitan, et minu andmed müüakse maha.
+</fieldset>
+<button type="submit">Saada</button>
+<button type="reset">Tühjenda</button>
 </html>
